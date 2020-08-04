@@ -11,6 +11,7 @@
 	content="text/html; charset=windows-1256">
 <title>Bibliothèque AFPA 2020 Projet Lud972vic</title>
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
@@ -21,6 +22,10 @@
 	<%@include file="header.jsp"%>
 
 	<div class="container mt-5 mb-5">
+		<p class="aligncenter">
+			<img src="img/bibliotheque2.jpg" alt="image arbre bibliothèque"
+				height="213px" width="313px">
+		</p>
 		<div class="card">
 			<div class="card-header">Recherche de livres</div>
 			<div class="card-body">
