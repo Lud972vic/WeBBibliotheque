@@ -18,7 +18,11 @@ public class LivreDaoImpl implements ILivreDao {
 
 		try {
 			PreparedStatement preparedStatement = connection
+<<<<<<< HEAD
 					.prepareStatement("INSERT INTO LIVRE (titre, description, isbn, code) VALUES(?,?,?,?)");
+=======
+					.prepareStatement("INSERT INTO LIVRES (titre, description, isbn, code) VALUES(?,?,?,?)");
+>>>>>>> ff048f9dee92c61a0de59af0fd5be35305fa08f8
 			preparedStatement.setString(1, livre.getTitre());
 			preparedStatement.setString(2, livre.getDescription());
 			preparedStatement.setString(3, livre.getIsbn());
@@ -26,7 +30,11 @@ public class LivreDaoImpl implements ILivreDao {
 			preparedStatement.executeUpdate();
 
 			PreparedStatement preparedStatementMaxId = connection
+<<<<<<< HEAD
 					.prepareStatement("SELECT Max(idlivre) As MaxID FROM Livre");
+=======
+					.prepareStatement("SELECT Max(idlivres) As MaxID FROM Livres");
+>>>>>>> ff048f9dee92c61a0de59af0fd5be35305fa08f8
 
 			ResultSet resultSet = preparedStatementMaxId.executeQuery();
 
@@ -52,7 +60,11 @@ public class LivreDaoImpl implements ILivreDao {
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(
+<<<<<<< HEAD
 					"SELECT * FROM LIVRE WHERE titre LIKE ? OR description LIKE ? OR  isbn LIKE ? OR  code LIKE ? Order By titre Asc");
+=======
+					"SELECT * FROM LIVRES WHERE titre LIKE ? OR description LIKE ? OR  isbn LIKE ? OR  code LIKE ? Order By titre Asc");
+>>>>>>> ff048f9dee92c61a0de59af0fd5be35305fa08f8
 
 			preparedStatement.setString(1, "%" + motsCles + "%");
 			preparedStatement.setString(2, "%" + motsCles + "%");
@@ -63,7 +75,11 @@ public class LivreDaoImpl implements ILivreDao {
 
 			while (resultSet.next()) {
 				Livre livre = new Livre();
+<<<<<<< HEAD
 				livre.setIdlivres(resultSet.getInt("idlivre"));
+=======
+				livre.setIdlivres(resultSet.getInt("idlivres"));
+>>>>>>> ff048f9dee92c61a0de59af0fd5be35305fa08f8
 				livre.setTitre(resultSet.getString("titre"));
 				livre.setDescription(resultSet.getString("description"));
 				livre.setIsbn(resultSet.getString("isbn"));
